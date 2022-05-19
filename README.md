@@ -1,8 +1,31 @@
-# vue_boilerplate
+# One And Zip Frontend
 
 ## Project setup
 ```
 npm install
+```
+### Quasar 설치(UI Frameword)
+```
+vue add quasar
+
+? Allow Quasar to replace App.vue, About.vue, Home.vue and (if available) router.js?
+>> Yes
+
+? Pick your favorite CSS preprocessor: 
+>> SCSS
+
+? Choose Quasar Icon Set 
+>> Material(Recomandded)
+
+? Default Quasar language pack - one from https://github.com/quasarframework/quasar/tree/dev/ui/lang
+>> en-US
+
+? Use RTL support? 
+>> No
+
+? Select features: 
+>> fontawesome
+
 ```
 
 ### Compiles and hot-reloads for development
