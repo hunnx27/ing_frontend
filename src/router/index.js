@@ -1,30 +1,37 @@
 import { createRouter, createWebHistory } from "vue-router"
-import HomeView from "../views/home/HomeView.vue"
-import AboutView from "../views/about/AboutView.vue"
-import LoginView from "../views/login/LoginView.vue"
-import QuasarSampleView from "../views/sample/QuasarSampleView.vue"
-
 
 const routes = [
     {
         path: "/",
         name: "Home",
-        component: HomeView,
+        component: ()=> import('@/views/home/HomeView.vue'),
+        meta: {
+            layout: 'AppLayoutHome'
+        }
     },
     {
         path: "/about",
         name: "About",
-        component: AboutView,
+        component: ()=> import('@/views/about/AboutView.vue'),
+        meta: {
+            layout: 'AppLayoutAbout'
+        }
     },
     {
         path: "/login",
         name: "Login",
-        component: LoginView,
+        component: ()=> import('@/views/login/LoginView.vue'),
+        meta: {
+            layout: 'AppLayoutAbout'
+        }
     },
     {
         path: "/quisarSample",
         name: "QuisarSample",
-        component: QuasarSampleView,
+        component: ()=> import('@/views/sample/QuasarSampleView.vue'),
+        meta: {
+            layout: 'AppLayoutAbout'
+        }
     }
 ]
 

@@ -1,12 +1,18 @@
 <template>
-  <div id="nav">
-      <router-link to="/login">Login</router-link> | 
-      <router-link to="/">Home</router-link> | 
-      <router-link to="/about">About</router-link> |
-      <router-link to="/quisarSample">QuisarSample</router-link>
+  <div id="app">
+    <AppLayout>
+      <router-view />
+    </AppLayout>
   </div>
-  <router-view />
 </template>
+
+<script>
+import AppLayout from '@/layouts/AppLayout'
+export default {
+  name: 'App',
+  components: { AppLayout }
+}
+</script>
 
 <style lang="scss" scoped>
   #nav {
